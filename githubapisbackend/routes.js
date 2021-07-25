@@ -6,6 +6,7 @@ const cors = require("cors");
 
 const API = "https://api.github.com";
 
+//route to fetch the user repos
 router.get("/:username/repos", cors(), (req, res) => {
   apiHelper
     .makeAPICall(`${API}/users/${req.params.username}/repos`)
@@ -17,6 +18,8 @@ router.get("/:username/repos", cors(), (req, res) => {
     });
 });
 
+//route to fetch the user information
+//push the user to database if not present
 router.get("/:username/userdetails", cors(), (req, res) => {
   User.findOne({ username: req.params.username }, function (err, user) {
     if (err) {

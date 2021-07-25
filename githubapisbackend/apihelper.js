@@ -1,5 +1,6 @@
 const request = require("request");
 
+//helps to call api from backend
 module.exports = {
   makeAPICall: function (url) {
     return new Promise((resolve, reject) => {

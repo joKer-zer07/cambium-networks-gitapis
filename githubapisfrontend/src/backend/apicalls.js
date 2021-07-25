@@ -1,30 +1,6 @@
-// const API = "https://api.github.com";
 import { API } from "./api";
-// export const getUserRepos = (username) => {
-//   return fetch(`${API}/users/${username}/repos`)
-//     .then((res) => {
-//       if (res.ok) {
-//         return res.json();
-//       }
-//       throw new Error(res.statusText);
-//     })
-//     .catch((err) => {
-//       return err.message;
-//     });
-// };
 
-// export const getUserDetails = (username) => {
-//   return fetch(`${API}/users/${username}`)
-//     .then((res) => {
-//       if (res.ok) {
-//         return res.json();
-//       }
-//       throw new Error(res.statusText);
-//     })
-//     .catch((err) => {
-//       return err.message;
-//     });
-// };
+//get user details
 export const getUserDetails = (username) => {
   return fetch(`${API}/${username}/userdetails`, {
     method: "GET",
@@ -40,6 +16,7 @@ export const getUserDetails = (username) => {
     });
 };
 
+//get user repos
 export const getAllRepos = (username) => {
   return fetch(`${API}/${username}/repos`, {
     method: "GET",
