@@ -10,7 +10,12 @@ const View1 = () => {
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleTextBoxChange = (event) => {
-    setUserName(event.target.value);
+    if (event.target.value) {
+      setUserName(event.target.value);
+    } else {
+      setUserName("");
+      setData([]);
+    }
   };
 
   return (
