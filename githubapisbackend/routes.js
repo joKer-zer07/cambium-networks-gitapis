@@ -21,7 +21,7 @@ router.get("/:username/userdetails", cors(), (req, res) => {
   User.findOne({ username: req.params.username }, function (err, user) {
     if (err) {
       res.status(400).json({
-        error: "Error while searching for user",
+        error: "Error while searching for user in the DB",
       });
     }
     if (!user) {
