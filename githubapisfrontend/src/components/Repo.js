@@ -6,8 +6,11 @@ const Repo = (props) => {
     <div className="Repo">
       <label>{"Owner : " + props.ownername}</label>
       <br />
+      <br />
+      <label>{props.name}</label>
+      <br />
       <a href={props.url} target="_blank" rel="noreferrer">
-        {props.name}
+        {props.url}
       </a>
       <p>{props.description}</p>
       <label>{"Stars : " + props.stars}</label>

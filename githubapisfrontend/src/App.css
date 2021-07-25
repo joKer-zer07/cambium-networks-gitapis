@@ -43,8 +43,6 @@
 
 .Repo > a {
   color: #3c3ede;
-  font-weight: bold;
-  font-size: 30px;
 }
 
 .Repo > p {
@@ -53,7 +51,7 @@
 }
 .Repo > label {
   color: black;
-  font-size: large;
+  font-size: larger;
   font-weight: bold;
 }
 
